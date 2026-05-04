@@ -1,147 +1,50 @@
-:root {
-  /* --- PALETTE DE COULEURS --- */
-  
-  /* Arrière-plan (Background) */
-  /* Un bleu très sombre, presque noir, pour le fond principal */
-  --bg-deep: #0D1117; 
-  /* Un bleu légèrement plus clair pour les cartes ou sections secondaires */
-  --bg-surface: #161B22; 
-  --bg-surface2: #282c31; 
-  --bg-surface3: #2a2b2c; 
-  /* Pour les overlays ou effets de transparence */
-  --bg-overlay: rgba(13, 17, 23, 0.85);
-
-  /* Couleurs Primaires (Le Bleu Kali) */
-  --primary-blue: #367BF0;       /* Bleu vibrant standard */
-  --primary-cyan: #27CCF5;       /* Le cyan lumineux du logo */
-  --primary-gradient: linear-gradient(135deg, #27CCF5 0%, #367BF0 100%);
-  
-  /* Couleurs Secondaires (Accent) */
-  /* L'orange/or utilisé pour le bouton "Download" */
-  --accent-gold: #FFCA28; 
-  --accent-gold-hover: #FFD54F;
-
-  /* Texte */
-  --text-main: #FFFFFF;          /* Titres et texte principal */
-  --text-muted: #8B949E;         /* Sous-titres, texte secondaire */
-  --text-link: #58A6FF;          /* Liens dans le texte */
-
-  /* --- TYPOGRAPHIE --- */
-  /* Je recommande 'Inter' ou 'Rubik' via Google Fonts */
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', 'Roboto Mono', monospace; /* Pour les bouts de code */
-
-  /* --- ESPACEMENTS & FORMES --- */
-  --radius-sm: 4px;
-  --radius-md: 8px;  /* Utilisé pour les boutons */
-  --radius-lg: 16px;
-  
-  --spacing-section: 4rem; /* Espace entre les sections */
-  --radius-md: 8px;
-}
-
-body {
-  background-color: var(--bg-deep);
-  color: var(--text-main);
-  font-family: var(--font-main);
-  margin: 0;
-}
-
-#nav-bar {
-  height: 11em;
-  width: 50%;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: 5%;
-  font-size: 1.2em;
-}
-
-a {
-  color: var(--text-main);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--text-main);
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-#header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 5%;
-}
-
-#IDE-Simulation {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  width: 50%;
-  background-color: #24292e;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-
-#IDE-header {
-  background-color: #1f2428;
-  padding:0.8em;
-}
-
-#IDE-header li img{
-  height: 1.5em;
-}
-
-#IDE-header li {
-  height: 1.5em;
-}
-
-
-#IDE-header ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-
-#IDE-header-file ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  background-color: #1f2428;
-}
-
-
-.IDE-button {
-  display: flex;
-  align-items: center;
-  height: 2.5em;
-  gap: 0.5em;
-  cursor: pointer;
-  padding: 0em 1em;
-  background-color: #1f2428;
+:root{
+--main-background-color: #FFDFDB;
+--couleur-texte: #000000;
 
 }
 
-#IDE-header-file ul img{
-  height: 1.5em;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.montserrat-thin{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-bold{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-medium{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 
+body{
+    background-image: url();
+    margin: 0;
+}
 
-#IDE-code-section{
-  height: 100%;
-  width: 100%;
+#headerText{
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+#headerText > h1{
+    margin: 0;
+}
+
+#headerTextMid{
+    
 }
