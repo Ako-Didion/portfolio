@@ -49,8 +49,8 @@
                     <span>2025-2026</span> 
                     <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
                         <span>
-                            <strong>Diplôme préparé : BUT Informatique (1ère année)</strong> 
-                            - <a href="https://iut-lannion.univ-rennes.fr/" target="_blank" style="color: var(--color-signal); text-decoration: none; border-bottom: 1px dotted var(--color-signal);">IUT de Lannion</a>
+                            <strong style="font-size: var(--text-body-md)">Diplôme préparé : BUT Informatique (1ère année)</strong> 
+                            - <a href="https://iut-lannion.univ-rennes.fr/" target="_blank" style="color: var(--color-signal);font-size: var(--text-body-md); text-decoration: none; border-bottom: 1px dotted var(--color-signal);">IUT de Lannion</a>
                         </span>
                         <a href="https://formations.univ-rennes.fr/parcours/informatique-info-parcours-administration-gestion-et-exploitation-des-donnees-iut-de" target="_blank" style="color: var(--color-stone); text-decoration: none; font-size: var(--text-label-sm); font-family: var(--font-body); border-bottom: 1px solid var(--color-stone); align-self: flex-start;">
                             🔗 Consulter le programme officiel du BUT Informatique
@@ -440,7 +440,7 @@
         const headerHeight = header.offsetHeight;
         let isNavigating = false;
         let scrollTimeout; 
-        const tolerance = 10; 
+        const tolerance = 1; 
 
         const navLinks = document.querySelectorAll('#nav-header a');
         navLinks.forEach(link => {
