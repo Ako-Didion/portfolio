@@ -66,7 +66,6 @@
             </ul>
         </section>
 
-        <!-- RUBRIQUE : TECHNOLOGIES -->
         <section id="technologies" class="section-container">
             <h2>Technologies Maîtrisées</h2>
             <p class="contact-text">
@@ -75,7 +74,6 @@
             
             <div class="tech-categories">
                 
-                <!-- Catégorie 1 : Langages -->
                 <div class="tech-category">
                     <h3>Langages de Programmation</h3>
                     <div class="tech-grid">
@@ -106,7 +104,6 @@
                     </div>
                 </div>
 
-                <!-- Catégorie 2 : Bases de données -->
                 <div class="tech-category">
                     <h3>Bases de Données</h3>
                     <div class="tech-grid">
@@ -121,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- Catégorie 3 : Outils & Environnement -->
                 <div class="tech-category">
                     <h3>Outils & Environnements</h3>
                     <div class="tech-grid">
@@ -140,7 +136,6 @@
                     </div>
                 </div>
 
-                <!-- Catégorie 4 : Outils Collaboratifs -->
                 <div class="tech-category">
                     <h3>Outils Collaboratifs</h3>
                     <div class="tech-grid">
@@ -178,7 +173,6 @@
                             <p><strong>Trace :</strong> Mon code source structuré et l'historique de mes développements, hébergés sur mon dépôt GitHub : <a href="https://github.com/Ako-Didion/Sokoban" target="_blank" style="color: var(--color-signal); text-decoration: none;">Ako-Didion/Sokoban</a>.</p>
                             <p><strong>Preuve :</strong> Le programme compile parfaitement sans erreur (zéro warning) et le jeu est 100% jouable (validation des conditions de victoire, gestion des murs et des caisses fonctionnelles).</p>
                             
-                            <!-- Bouton Détails (Accordéon natif HTML) -->
                             <details class="project-more-details">
                                 <summary>En savoir plus sur les mécaniques du jeu</summary>
                                 <div class="details-content">
@@ -315,7 +309,6 @@
                 </article>
         </section>
 
-        <!-- RUBRIQUE : PROJETS PERSONNELS -->
         <section id="projets-perso" class="section-container">
             <h2>Projets Personnels</h2>
             <p class="contact-text">
@@ -324,7 +317,6 @@
 
             <div class="perso-grid">
                 
-                    <!-- Projet Perso 1 -->
                 <article class="perso-card">
                     <span class="project-year">2026</span>
                     <h3>Auto-Downloader Moodle</h3>
@@ -337,7 +329,6 @@
                 </article>
 
 
-                <!-- Projet Perso 2 -->
                 <article class="perso-card">
                     <span class="project-year">2026</span>
                     <h3>LOLWATCHER</h3>
@@ -353,14 +344,12 @@
             </div>
         </section>
 
-        <!-- RUBRIQUE : HOBBIES & CENTRES D'INTÉRÊT -->
         <section id="hobbies" class="section-container">
             <h2>Centres d'intérêt</h2>
             <p class="contact-text">
                 En dehors du développement, j'accorde une grande importance à mon équilibre personnel à travers différentes activités qui forgent mon esprit d'analyse et ma rigueur.
             </p>
 
-            <!-- On réutilise la classe skills-list pour un affichage minimaliste et numéroté -->
             <ul class="skills-list" style="max-width: 800px;">
                 <li>
                     <span>01</span> 
@@ -376,7 +365,15 @@
                         <span style="color: var(--color-graphite); font-family: var(--font-body); font-size: var(--text-body-sm); text-transform: none;">Passionné par l'univers du jeu vidéo, particulièrement par les jeux compétitifs et de stratégie. Cette passion nourrit également ma curiosité technique, comme en témoigne le développement de mes propres outils d'analyse (ex: LOLWATCHER).</span>
                     </div>
                 </li>
+                <li>
+            <span>03</span> 
+            <div>
+                <strong>Activités Sociales & Relationnel</strong><br>
+                <span style="color: var(--color-graphite); font-family: var(--font-body); font-size: var(--text-body-sm); text-transform: none;">J'accorde beaucoup d'importance aux sorties et aux activités en groupe. Au-delà de l'équilibre personnel que cela m'apporte, ces moments de partage développent ma capacité de communication, mon ouverture d'esprit et mon aisance relationnelle ; des compétences humaines essentielles pour s'intégrer et collaborer efficacement au sein d'une entreprise.</span>
+            </div>
+        </li>
             </ul>
+
         </section>
 
         <section id="contacts" class="section-container">
@@ -403,7 +400,6 @@
                     <button type="submit" class="btn-primary">Envoyer le message</button>
                 </form>
 
-                <!-- Réseaux sociaux -->
                 <div class="social-links">
                     <h3>Mes Réseaux</h3>
                     <ul>
@@ -414,7 +410,6 @@
                             </a>
                         </li>
                         <li>
-                            <!-- Remplace le lien par ton vrai profil LinkedIn -->
                             <a href="https://www.linkedin.com/in/ako-didion/" target="_blank" class="social-btn">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="tech-icon">
                                 LinkedIn
@@ -436,7 +431,7 @@
             <a href="mentions-legales.html" class="footer-legal-link">Mentions Légales</a>
         </div>
     </footer>
-    
+
     </main>
     
    <script>
@@ -444,35 +439,29 @@
         const header = document.querySelector('header');
         const headerHeight = header.offsetHeight;
         let isNavigating = false;
-        let scrollTimeout; // On prépare un détecteur d'arrêt
+        let scrollTimeout; 
         const tolerance = 15; 
 
-        // 1. Quand on clique sur un lien du menu
         const navLinks = document.querySelectorAll('#nav-header a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 isNavigating = true; 
-                header.classList.remove('header-hidden'); // Force la barre à rester affichée
+                header.classList.remove('header-hidden');
             });
         });
 
-        // 2. Quand la page défile
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Si la page défile à cause d'un clic sur le menu...
             if (isNavigating) {
-                // On annule le précédent détecteur d'arrêt
                 clearTimeout(scrollTimeout);
-                // On en lance un nouveau : si la page ne bouge plus pendant 100ms, c'est que le trajet est fini !
                 scrollTimeout = setTimeout(() => {
                     isNavigating = false;
-                    lastScrollTop = scrollTop; // On synchronise pour que la souris prenne le relais proprement
+                    lastScrollTop = scrollTop; 
                 }, 100);
-                return; // On stoppe le script ici : interdiction de cacher la barre !
+                return;
             }
 
-            // --- SCROLL CLASSIQUE (Souris) ---
             if (scrollTop <= headerHeight) {
                 header.classList.remove('header-hidden');
                 lastScrollTop = scrollTop;
@@ -483,11 +472,10 @@
                 return;
             }
 
-            // Si on défile vers le bas
             if (scrollTop > lastScrollTop) {
                 header.classList.add('header-hidden'); 
             } 
-            // Si on défile vers le haut
+            
             else if (scrollTop < lastScrollTop) {
                 header.classList.remove('header-hidden'); 
             }

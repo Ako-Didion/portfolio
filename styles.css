@@ -158,12 +158,12 @@ header {
   padding: 120px var(--page-padding);
   border-bottom: var(--rule-hairline);
   height: 100vh;
-  margin-top: 80px; /* Compense la hauteur du header pour que le contenu soit bien centré */
+  margin-top: 80px; 
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: 200px; /* Basé sur ton code original */
+  font-size: 200px;
   letter-spacing: var(--space-xs);
   line-height: var(--leading-tight);
   text-transform: uppercase;
@@ -238,7 +238,6 @@ header {
   letter-spacing: var(--track-label);
 }
 
-/* On retire la marge haute de la grille quand elle est dans une catégorie */
 .tech-category .tech-grid {
   margin-top: 0; 
 }
@@ -284,7 +283,7 @@ header {
   text-decoration: none;
   letter-spacing: var(--track-label);
   padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-pill); /* Utilisé pour un look moderne / arrondi si souhaité */
+  border-radius: var(--radius-pill);
   transition: background-color var(--dur-base) var(--ease-out);
 }
 
@@ -292,7 +291,6 @@ header {
   background-color: var(--color-signal);
 }
 
-/* --- Nouveaux styles pour le Portfolio S2 -------------------- */
 .content-block {
   max-width: 800px;
   margin: var(--space-2xl) auto 0;
@@ -326,19 +324,16 @@ header {
 
 
 
-
-
-
 /* --- Nouvelle structure de la Carte Projet Éditoriale ----------- */
 .project-card {
   background-color: var(--color-neutral);
   border: var(--rule-hairline);
-  padding: 0; /* On gère les paddings en interne pour l'alignement */
+  padding: 0; 
   display: flex;
   justify-content: space-between;
   transition: border var(--dur-fast) var(--ease-out);
   overflow: hidden;
-  margin: 40px 0; /* Espacement vertical entre les cartes */
+  margin: 40px 0;
 }
 
 
@@ -354,13 +349,13 @@ header {
   width: 100%;
   border-bottom: var(--rule-hairline);
   background-color: var(--color-surface);
-  line-height: 0; /* Évite un espace vide sous l'image */
+  line-height: 0; 
 }
 
 .project-img {
   width: 100%;
-  height: 300px; /* Hauteur fixe pour harmoniser la grille */
-  object-fit: cover; /* Adapte et recadre proprement l'image */
+  height: 300px; 
+  object-fit: cover; 
 }
 
 /* Zone des textes sous l'image */
@@ -406,7 +401,7 @@ header {
   background-color: var(--color-surface);
   align-items: center;
   justify-content: flex-start;
-  width: 50px; /* Largeur de la colonne de logos */
+  width: 50px; 
 }
 
 /* Icônes de technologies */
@@ -426,10 +421,10 @@ header {
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: var(--text-mono-sm);
-  color: var(--color-signal); /* Rouge signal */
+  color: var(--color-signal);
   text-transform: uppercase;
   letter-spacing: var(--track-mono);
-  list-style: none; /* Cache la flèche par défaut du navigateur */
+  list-style: none;
   border-bottom: 1px dashed var(--color-signal);
   display: inline-block;
   padding-bottom: var(--space-xs);
@@ -440,12 +435,6 @@ header {
   opacity: 0.7;
 }
 
-/* Cache la flèche par défaut sur les navigateurs Webkit (Chrome, Safari) */
-.project-more-details summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Ajoute un petit + devant le texte */
 .project-more-details summary::before {
   content: "+ ";
   font-weight: bold;
@@ -456,7 +445,6 @@ header {
   content: "- ";
 }
 
-/* Le contenu qui se déroule */
 .details-content {
   margin-top: var(--space-sm);
   padding: var(--space-md);
@@ -521,7 +509,7 @@ header {
 .perso-card p {
   color: var(--color-graphite);
   font-size: var(--text-body-sm);
-  flex-grow: 1; /* Pousse les éléments du bas vers le fond de la carte */
+  flex-grow: 1; 
   margin-bottom: var(--space-lg);
 }
 
@@ -565,14 +553,14 @@ header {
 /* --- Section Contacts & Formulaire -------------------------- */
 .contact-wrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Le formulaire prend 2/3, les réseaux 1/3 */
+  grid-template-columns: 2fr 1fr;
   gap: var(--space-2xl);
   margin-top: var(--space-xl);
 }
 
 @media (max-width: 768px) {
   .contact-wrapper {
-    grid-template-columns: 1fr; /* Sur mobile, tout passe sur une seule colonne */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -606,7 +594,7 @@ header {
   padding: var(--space-md);
   transition: border var(--dur-fast) var(--ease-out);
   outline: none;
-  resize: vertical; /* Permet d'agrandir la zone de texte uniquement de haut en bas */
+  resize: vertical;
 }
 
 /* Effet quand on clique dans un champ */
@@ -667,11 +655,11 @@ header {
 
 /* --- Bouton CV ---------------------------------------------- */
 .btn-cv {
-  margin-top: var(--space-lg); /* Crée un espace avec la liste au-dessus */
+  margin-top: var(--space-lg); 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Prend toute la largeur de la colonne */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -692,7 +680,7 @@ footer {
 }
 
 .footer-content strong {
-  color: var(--color-graphite); /* Fait légèrement ressortir "IUT de Lannion" */
+  color: var(--color-graphite);
 }
 
 /* Lien Mentions Légales dans le Footer */
@@ -713,7 +701,7 @@ footer {
 
 /* --- Page Mentions Légales ---------------------------------- */
 .legal-section {
-  min-height: 70vh; /* Permet au footer de rester en bas même s'il y a peu de texte */
+  min-height: 70vh; 
 }
 
 .legal-section .content-block {
@@ -738,5 +726,5 @@ footer {
 }
 
 .section-container{
-  margin-top: 100px; /* Compense la hauteur du header pour que le contenu soit bien centré */
+  margin-top: 100px; 
 }
