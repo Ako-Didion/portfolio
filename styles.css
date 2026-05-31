@@ -71,6 +71,7 @@
 }
 
 html {
+  scroll-padding-top: 60px; /* Évite que la barre ne cache les titres lors du clic */
   scroll-behavior: smooth;
 }
 
@@ -415,6 +416,152 @@ header {
   object-fit: contain;
 }
 
+/* --- Bouton Détails (Accordéon natif) ----------------------- */
+.project-more-details {
+  margin-top: var(--space-md);
+}
+
+/* Le bouton cliquable */
+.project-more-details summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  color: var(--color-signal); /* Rouge signal */
+  text-transform: uppercase;
+  letter-spacing: var(--track-mono);
+  list-style: none; /* Cache la flèche par défaut du navigateur */
+  border-bottom: 1px dashed var(--color-signal);
+  display: inline-block;
+  padding-bottom: var(--space-xs);
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.project-more-details summary:hover {
+  opacity: 0.7;
+}
+
+/* Cache la flèche par défaut sur les navigateurs Webkit (Chrome, Safari) */
+.project-more-details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Ajoute un petit + devant le texte */
+.project-more-details summary::before {
+  content: "+ ";
+  font-weight: bold;
+}
+
+/* Change le + en - quand c'est ouvert */
+.project-more-details[open] summary::before {
+  content: "- ";
+}
+
+/* Le contenu qui se déroule */
+.details-content {
+  margin-top: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-surface); /* Fond crème */
+  border-left: 2px solid var(--color-signal);
+}
+
+.details-content p {
+  font-size: var(--text-body-sm);
+  color: var(--color-graphite);
+  margin-bottom: var(--space-sm);
+}
+
+.details-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Projets Personnels (Petites cartes) -------------------- */
+.perso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.perso-card {
+  background-color: var(--color-neutral);
+  border: var(--rule-hairline);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  transition: border var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+/* Effet de léger soulèvement et bordure rouge au survol */
+.perso-card:hover {
+  border-color: var(--color-signal);
+  transform: translateY(-4px); 
+}
+
+.perso-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-headline-sm);
+  margin: var(--space-xs) 0 var(--space-sm) 0;
+  text-transform: uppercase;
+  letter-spacing: var(--track-display);
+}
+
+.perso-card p {
+  color: var(--color-graphite);
+  font-size: var(--text-body-sm);
+  flex-grow: 1; /* Pousse les éléments du bas vers le fond de la carte */
+  margin-bottom: var(--space-lg);
+}
+
+.perso-tech {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  border-top: 1px dashed var(--color-stone);
+  padding-top: var(--space-sm);
+}
+
+.tech-icon-small {
+  width: 18px;
+  height: 18px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.perso-card:hover .tech-icon-small {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.perso-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-sm);
+  color: var(--color-ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--track-mono);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.perso-link:hover {
+  color: var(--color-signal);
+}
+
+
+
 /* --- Section Contacts & Formulaire -------------------------- */
 .contact-wrapper {
   display: grid;
@@ -533,8 +680,63 @@ header {
 /* --- Footer ------------------------------------------------- */
 footer {
   text-align: center;
-  padding: var(--space-xl) var(--page-padding);
+  padding: var(--space-2xl) var(--page-padding);
   font-family: var(--font-mono);
   font-size: var(--text-mono-sm);
   color: var(--color-stone);
+  background-color: var(--color-surface);
+}
+
+.footer-content p {
+  margin-bottom: var(--space-xs);
+}
+
+.footer-content strong {
+  color: var(--color-graphite); /* Fait légèrement ressortir "IUT de Lannion" */
+}
+
+/* Lien Mentions Légales dans le Footer */
+.footer-legal-link {
+  color: var(--color-stone);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-stone);
+  display: inline-block;
+  margin-top: var(--space-md);
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.footer-legal-link:hover {
+  color: var(--color-signal);
+  border-color: var(--color-signal);
+}
+
+
+/* --- Page Mentions Légales ---------------------------------- */
+.legal-section {
+  min-height: 70vh; /* Permet au footer de rester en bas même s'il y a peu de texte */
+}
+
+.legal-section .content-block {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-section .content-block h3 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-signal);
+  font-family: var(--font-display);
+  font-size: var(--text-headline-sm);
+  border-bottom: var(--rule-hairline);
+  padding-bottom: var(--space-xs);
+}
+
+.legal-section .content-block p {
+  color: var(--color-graphite);
+  margin-bottom: var(--space-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.section-container{
+  margin-top: 100px; /* Compense la hauteur du header pour que le contenu soit bien centré */
 }
