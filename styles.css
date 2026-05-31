@@ -1,20 +1,16 @@
-/* ============================================================
-   Linen — ultra-minimalist editorial design system
-   Framework-agnostic CSS. Tokens first, components after.
-   ============================================================ */
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
   /* --- Colors ------------------------------------------------ */
-  --color-surface: #f1ede3;        /* Linen — primary page background */
-  --color-neutral: #f7f4ec;        /* Paper — inset panels */
-  --color-ink: #111111;            /* Primary text and buttons */
-  --color-graphite: #3a3733;       /* Body copy */
-  --color-stone: #8a857c;          /* Muted labels and captions */
-  --color-hairline: #1f1d1a;       /* 1px dividers and borders */
-  --color-signal: #c8462c;         /* Accent — active and focus only */
-  --color-on-ink: #f1ede3;         /* Label color on Ink buttons */
+  --color-surface: #f1ede3;
+  --color-neutral: #f7f4ec;
+  --color-ink: #111111;
+  --color-graphite: #3a3733;
+  --color-stone: #8a857c;
+  --color-hairline: #1f1d1a;
+  --color-signal: #c8462c;
+  --color-on-ink: #f1ede3;
 
   /* --- Typography ------------------------------------------- */
   --font-display: "Archivo Narrow", "Arial Narrow", sans-serif;
@@ -67,44 +63,478 @@
   --dur-base: 180ms;
 }
 
-
-
-*{
+/* --- Base Reset --------------------------------------------- */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   background-color: var(--color-surface);
-  color: var( --color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: var(--leading-relaxed);
 }
 
-#nav-header{
+/* --- Header Smart Sticky (Apparaît au scroll vers le haut) --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-surface);
+  /* L'animation fluide (transition) quand la barre monte ou descend */
+  transition: transform 0.2s 0.2s;
+
+}
+
+/* Cette classe sera ajoutée/retirée par le JavaScript */
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+
+
+/* --- Navigation --------------------------------------------- */
+#nav-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
+  padding: 0 var(--page-padding);
+  font-family: var(--font-display);
+  font-size: var(--text-headline-sm);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  border-bottom: var(--rule-hairline);
+}
+
+#nav-header ul {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+#nav-header a {
+  text-decoration: none;
+  color: var(--color-ink);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+#nav-header a:hover {
+  color: var(--color-signal);
+}
+
+/* --- Sections Communes -------------------------------------- */
+.section-container {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--page-padding);
+  border-bottom: var(--rule-hairline);
+}
+
+.section-container h2 {
   font-family: var(--font-display);
   font-size: var(--text-headline-md);
-  letter-spacing: var(--space-xs);
+  margin-bottom: var(--space-xl);
   text-transform: uppercase;
-  border: 1px solid var(--color-hairline);
+  letter-spacing: var(--track-display);
 }
 
-#nav-header ul{
+/* --- Hero (Accueil) ----------------------------------------- */
+.hero {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px var(--page-padding);
+  border-bottom: var(--rule-hairline);
+  height: 100vh;
+  margin-top: 80px; /* Compense la hauteur du header pour que le contenu soit bien centré */
 }
 
-#nav-header li{
-  list-style: none;
-  text-decoration: none;
-  font-size: var(--text-headline-sm);
-
-}
-
-header h1{
-  font-size: 200px;
+.hero h1 {
   font-family: var(--font-display);
+  font-size: 200px; /* Basé sur ton code original */
   letter-spacing: var(--space-xs);
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+}
 
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-body-md);
+  color: var(--color-graphite);
+  margin-top: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: var(--track-mono);
+}
+
+
+/* --- Technologies (Nouvelle section) ------------------------ */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-neutral);
+  border: var(--rule-hairline);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  color: var(--color-ink);
+  text-transform: uppercase;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.tech-item:hover {
+  border-color: var(--color-signal);
+  color: var(--color-signal);
+}
+
+.tech-item .tech-icon {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.tech-item:hover .tech-icon {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* --- Mise en page des Catégories Technologies --------------- */
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.tech-category h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-body-md);
+  color: var(--color-signal);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  border-bottom: 1px dashed var(--color-stone);
+  padding-bottom: var(--space-xs);
+  letter-spacing: var(--track-label);
+}
+
+/* On retire la marge haute de la grille quand elle est dans une catégorie */
+.tech-category .tech-grid {
+  margin-top: 0; 
+}
+
+
+/* --- Compétences -------------------------------------------- */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px dashed var(--color-stone);
+  font-size: var(--text-body-md);
+}
+
+.skills-list span {
+  font-family: var(--font-mono);
+  color: var(--color-signal);
+  font-size: var(--text-mono-sm);
+}
+
+/* --- Contacts & Bouton -------------------------------------- */
+.contact-text {
+  font-size: var(--text-body-md);
+  color: var(--color-graphite);
+  margin-bottom: var(--space-lg);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-ink);
+  color: var(--color-on-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-body-sm);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: var(--track-label);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-pill); /* Utilisé pour un look moderne / arrondi si souhaité */
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-signal);
+}
+
+/* --- Nouveaux styles pour le Portfolio S2 -------------------- */
+.content-block {
+  max-width: 800px;
+  margin: var(--space-2xl) auto 0;
+  text-align: left;
+}
+
+.content-block h2, 
+.content-block h3 {
+  font-family: var(--font-display);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.content-block h2 {
+  font-size: var(--text-headline-sm);
+  color: var(--color-ink);
+  border-bottom: var(--rule-hairline);
+  padding-bottom: var(--space-xs);
+}
+
+.content-block h3 {
+  font-size: var(--text-body-md);
+  color: var(--color-signal);
+}
+
+.content-block p {
+  color: var(--color-graphite);
+  margin-bottom: var(--space-md);
+}
+
+
+
+
+
+
+/* --- Nouvelle structure de la Carte Projet Éditoriale ----------- */
+.project-card {
+  background-color: var(--color-neutral);
+  border: var(--rule-hairline);
+  padding: 0; /* On gère les paddings en interne pour l'alignement */
+  display: flex;
+  justify-content: space-between;
+  transition: border var(--dur-fast) var(--ease-out);
+  overflow: hidden;
+  margin: 40px 0; /* Espacement vertical entre les cartes */
+}
+
+
+/* Zone principale (Image + Textes) */
+.project-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur de l'image principale */
+.project-image-wrapper {
+  width: 100%;
+  border-bottom: var(--rule-hairline);
+  background-color: var(--color-surface);
+  line-height: 0; /* Évite un espace vide sous l'image */
+}
+
+.project-img {
+  width: 100%;
+  height: 300px; /* Hauteur fixe pour harmoniser la grille */
+  object-fit: cover; /* Adapte et recadre proprement l'image */
+}
+
+/* Zone des textes sous l'image */
+.project-details {
+  padding: var(--space-lg);
+}
+
+.project-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  color: var(--color-stone);
+  text-transform: uppercase;
+}
+
+.project-details h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-headline-sm);
+  margin: var(--space-xs) 0 var(--space-md) 0;
+  text-transform: uppercase;
+  letter-spacing: var(--track-display);
+}
+
+.project-details p {
+  color: var(--color-graphite);
+  font-size: var(--text-body-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.project-details p strong {
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  text-transform: uppercase;
+}
+
+/* Barre latérale des technologies (sur le côté droit) */
+.project-tech-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-sm);
+  border-left: var(--rule-hairline);
+  background-color: var(--color-surface);
+  align-items: center;
+  justify-content: flex-start;
+  width: 50px; /* Largeur de la colonne de logos */
+}
+
+/* Icônes de technologies */
+.tech-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* --- Section Contacts & Formulaire -------------------------- */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Le formulaire prend 2/3, les réseaux 1/3 */
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr; /* Sur mobile, tout passe sur une seule colonne */
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  color: var(--color-stone);
+  text-transform: uppercase;
+}
+
+/* Style des champs de saisie */
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-ink);
+  background-color: var(--color-neutral);
+  border: var(--rule-hairline);
+  padding: var(--space-md);
+  transition: border var(--dur-fast) var(--ease-out);
+  outline: none;
+  resize: vertical; /* Permet d'agrandir la zone de texte uniquement de haut en bas */
+}
+
+/* Effet quand on clique dans un champ */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: var(--rule-signal);
+
+}
+
+.contact-form button {
+  align-self: flex-start;
+  cursor: pointer;
+  border: none;
+  margin-top: var(--space-sm);
+}
+
+/* --- Style des Réseaux Sociaux ------------------------------ */
+.social-links h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-headline-sm);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: var(--track-display);
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: 0;
+}
+
+/* Boutons des réseaux sociaux */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-decoration: none;
+  color: var(--color-graphite);
+  font-family: var(--font-mono);
+  font-size: var(--text-body-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: var(--rule-hairline);
+  background-color: var(--color-neutral);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.social-btn:hover {
+  border-color: var(--color-signal);
+  color: var(--color-signal);
+}
+
+.social-btn .tech-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Bouton CV ---------------------------------------------- */
+.btn-cv {
+  margin-top: var(--space-lg); /* Crée un espace avec la liste au-dessus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Prend toute la largeur de la colonne */
+  box-sizing: border-box;
+}
+
+
+
+/* --- Footer ------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: var(--space-xl) var(--page-padding);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  color: var(--color-stone);
 }

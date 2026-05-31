@@ -1,24 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ako's portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ako's Portfolio - BUT Informatique</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav id="nav-header">
             <p>PORTFOLIO</p>
             <ul>
-                <li>Accueil</li>
-                <li>Projets</li>
-                <li>Competences</li>
-                <li>Contacts</li>
+                <li><a href="#accueil">Présentation</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#technologies">Technologies</a></li> <!-- NOUVELLE LIGNE ICI -->
+                <li><a href="#competences">Les 6 Compétences</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
-        <h1>AKO</h1>
     </header>
 
+    <main>
+        
+
+        <section id="accueil" class="hero">
+            <h1>AKO DIDION</h1>
+            <p class="subtitle">Étudiant en 1ère année de BUT Informatique</p>
+            <div class="content-block">
+                <h2>À propos de moi</h2>
+                <p>
+                    Actuellement étudiant en première année de <strong>BUT Informatique</strong> à l'IUT de Lannion, je me passionne pour le développement et la résolution de problèmes techniques complexes. Ce portfolio a pour but de documenter et valider l'acquisition de mes 6 compétences clés développées au cours de cette année.
+                </p>
+                <h3>Mes Objectifs</h3>
+                <p>
+                    Je suis activement à la recherche d'un <strong>stage</strong> ou d'une <strong>alternance</strong> pour la suite de mon cursus. Mon objectif est de m'insérer dans une équipe professionnelle pour travailler sur des domaines qui m'attirent particulièrement, tels que la <strong>conception d'applications web/logicielles</strong> ou la <strong>gestion d'infrastructures</strong>.
+                </p>
+            </div>
+        </section>
+
+        <section id="formation" class="section-container">
+            <h2>Diplômes et Formation</h2>
+            <p class="contact-text">
+                Mon parcours académique et les établissements qui m'accompagnent.
+            </p>
+            <ul class="skills-list">
+                <li>
+                    <span>2025-2026</span> 
+                    <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                        <span>
+                            <strong>Diplôme préparé : BUT Informatique (1ère année)</strong> 
+                            - <a href="https://iut-lannion.univ-rennes.fr/" target="_blank" style="color: var(--color-signal); text-decoration: none; border-bottom: 1px dotted var(--color-signal);">IUT de Lannion</a>
+                        </span>
+                        <a href="https://formations.univ-rennes.fr/parcours/informatique-info-parcours-administration-gestion-et-exploitation-des-donnees-iut-de" target="_blank" style="color: var(--color-stone); text-decoration: none; font-size: var(--text-label-sm); font-family: var(--font-body); border-bottom: 1px solid var(--color-stone); align-self: flex-start;">
+                            🔗 Consulter le programme officiel du BUT Informatique
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <span>2024-2025</span> 
+                    <div>
+                        <strong>Diplôme obtenu : Baccalauréat général</strong>- Lycée René Cassin, Montfort-sur-Meu
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- RUBRIQUE : TECHNOLOGIES -->
+        <section id="technologies" class="section-container">
+            <h2>Technologies Maîtrisées</h2>
+            <p class="contact-text">
+                Aperçu des langages, outils et environnements que j'ai appris à maîtriser durant ma première année de BUT Informatique, classés par domaine d'application.
+            </p>
+            
+            <div class="tech-categories">
+                
+                <!-- Catégorie 1 : Langages -->
+                <div class="tech-category">
+                    <h3>Langages de Programmation</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-icon">
+                            <span>C</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon">
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-icon">
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catégorie 2 : Bases de données -->
+                <div class="tech-category">
+                    <h3>Bases de Données</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catégorie 3 : Outils & Environnement -->
+                <div class="tech-category">
+                    <h3>Outils & Environnements</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catégorie 4 : Outils Collaboratifs -->
+                <div class="tech-category">
+                    <h3>Outils Collaboratifs</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-original.svg" alt="Trello" class="tech-icon">
+                            <span>Trello</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Workspace" class="tech-icon">
+                            <span>Google Workspace</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="competences" class="section-container">
+            <h2>Acquisition des 6 Compétences</h2>
+            <p class="contact-text">
+                Voici la justification de l'acquisition de mes compétences de première année 
+                au travers de mes différentes réalisations.
+            </p>
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://git.unistra.fr/uploads/-/system/project/avatar/32844/a.png" alt="Aperçu du projet" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 1</span>
+                            <h3>Réaliser</h3>
+                            <p><strong>Description :</strong> Développement d'une application de A à Z. Dans ce cadre, j'ai conçu et programmé un jeu de Sokoban entièrement fonctionnel en langage C, intégrant la logique de jeu, les déplacements complexes et la gestion des collisions.</p>
+                            <p><strong>Trace :</strong> Mon code source structuré et l'historique de mes développements, hébergés sur mon dépôt GitHub : <a href="https://github.com/Ako-Didion/Sokoban" target="_blank" style="color: var(--color-signal); text-decoration: none;">Ako-Didion/Sokoban</a>.</p>
+                            <p><strong>Preuve :</strong> Le programme compile parfaitement sans erreur (zéro warning) et le jeu est 100% jouable (validation des conditions de victoire, gestion des murs et des caisses fonctionnelles).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="HTML5" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.chesscomfiles.com/uploads/v1/chess_term/2ead08c8-4eed-11ed-93f9-0ddee32a9737.e27027bd.630x354o.34de2c366ad6@2x.png" alt="Aperçu du problème du Cavalier d'Euler" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 2</span>
+                            <h3>Optimiser</h3>
+                            <p><strong>Description :</strong> Choix des structures de données et des algorithmes adaptés face à un problème complexe. Dans le cadre de la SAE 2.02, j'ai implémenté en Python le problème du cavalier d'Euler (parcourir un échiquier complet sans jamais repasser sur la même case) en appliquant des méthodes d'optimisation algorithmique pour éviter l'explosion combinatoire.</p>
+                            <p><strong>Trace :</strong> Les scripts algorithmiques Python, les fonctions de backtracking et l'historique des versions, accessibles sur le dépôt GitHub public : <a href="https://github.com/BastienAUL/SAE_2.02_Cavalier_DEuler" target="_blank" style="color: var(--color-signal); text-decoration: none;">BastienAUL/SAE_2.02_Cavalier_DEuler</a>.</p>
+                            <p><strong>Preuve :</strong> Intégration réussie d'heuristiques d'optimisation (telle que la règle de Warnsdorff) permettant de trouver un chemin valide de manière quasi instantanée sur un échiquier 8x8, là où un algorithme de force brute classique (backtracking pur) s'interrompt par dépassement de mémoire ou temps d'exécution infini.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://hello-pomelo.com/wp-content/uploads/2025/02/docker-logo-1920x1024.jpg.webp" alt="Aperçu du projet AutoConvert avec Docker" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 3</span>
+                            <h3>Administrer</h3>
+                            <p><strong>Description :</strong> Automatisation de tâches, traitement de données et conteneurisation d'environnement. Dans le cadre de la SAE 1.03, j'ai développé des scripts en Bash et PHP pour organiser et trier automatiquement un grand volume de fichiers (images, textes, excels) selon leurs métadonnées avec l'aide d'images docker. L'ensemble de l'application a été isolé et déployé au sein d'un conteneur <strong>Docker</strong> pour garantir une infrastructure propre.</p>
+                            <p><strong>Trace :</strong> Les scripts d'automatisation Bash/PHP ainsi que le fichier de configuration <strong>Dockerfile</strong> requis pour l'infrastructure, accessibles sur mon dépôt GitHub public : <a href="https://github.com/BastienAUL/SAE_1.03_AutoConvert/tree/main/SAE_1.03_AutoConvert" target="_blank" style="color: var(--color-signal); text-decoration: none;">SAE_1.03_AutoConvert</a>.</p>
+                            <p><strong>Preuve :</strong> Déploiement et exécution automatique réussis du traitement au sein de l'image Docker. L'environnement est totalement isolé, indépendant de la machine hôte et 100% reproductible sans conflits de dépendances, ce qui valide la maîtrise de l'administration système moderne.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://kinsta.com/wp-content/uploads/2022/02/postgres-logo.png" alt="Aperçu du projet Base de Données" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 4</span>
+                            <h3>Gérer</h3>
+                            <p><strong>Description :</strong> Conception et mise en œuvre d'une base de données relationnelle. En partant d'un besoin client exprimé en langage naturel dans le cadre de la SAÉ 1.04, j'ai modélisé le système en construisant un diagramme de classe (UML) et en analysant un jeu de données réelles pour affiner les règles de gestion.</p>
+                            <p><strong>Trace :</strong> Les trois livrables produits durant les 6 semaines de projet : le rapport de conception (PDF) contenant le diagramme de classe, le script SQL d'implémentation de la base, et les scripts SQL répondant aux questions métiers.</p>
+                            <p><strong>Preuve :</strong> L'évaluation positive et les notes individuelles obtenues sur les différents rendus, validant l'acquisition des apprentissages critiques associés : concevoir une base de données relationnelle à partir d'un cahier des charges (APC 4.3) et l'interroger efficacement (APC 4.1).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL / PostgreSQL" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
+                                </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://private-user-images.githubusercontent.com/201139250/531350733-956a00c7-6d60-40c0-9d06-2a9ed84bf1b8.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAyMjUzNzksIm5iZiI6MTc4MDIyNTA3OSwicGF0aCI6Ii8yMDExMzkyNTAvNTMxMzUwNzMzLTk1NmEwMGM3LTZkNjAtNDBjMC05ZDA2LTJhOWVkODRiZjFiOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDUzMVQxMDU3NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lYTJjNjRkOTc5M2E0OGI3MDE1MjNmYzhkMDFiZmUzY2ZmZTBiNTUwNjgxYmEzYTNkNWZiYmY1YjNiZTA3ZDIwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.rbnIRevlmddZSRYCZZGblL5kqWcSMguOP86XLF8SKiM" alt="Aperçu du projet Tourisme USA" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 5</span>
+                            <h3>Conduire</h3>
+                            <p><strong>Description :</strong> Conduite d'un projet informatique et réponse à un besoin client. Dans le cadre de la SAÉ 1.05, l'objectif était de concevoir et développer un site web de A à Z sur le thème du tourisme aux États-Unis. Ce projet a nécessité une planification rigoureuse, la gestion des exigences du cahier des charges et l'organisation des étapes de développement (maquettage, intégration, tests).</p>
+                            <p><strong>Trace :</strong> L'ensemble des fichiers du site web, l'arborescence et l'historique du versionning, centralisés sur mon dépôt GitHub public : <a href="https://github.com/BastienAUL/SAE_1.05_Tourisme_USA" target="_blank" style="color: var(--color-signal); text-decoration: none;">SAE_1.05_Tourisme_USA</a>.</p>
+                            <p><strong>Preuve :</strong> Le respect strict des jalons et de la date de livraison. Le site web final est parfaitement fonctionnel, ergonomique et a été validé lors de la présentation, ce qui démontre ma capacité à mener un projet de sa conception à son déploiement.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-main-content">
+                        <div class="project-image-wrapper">
+                            <img src="https://www.muse-motivation.fr/wp-content/uploads/2018/06/team-building-5raisons-hor.jpg" alt="Aperçu du projet SAE 1.06" class="project-img">
+                        </div>
+                        <div class="project-details">
+                            <span class="project-year">Compétence 6</span>
+                            <h3>Collaborer</h3>
+                            <p><strong>Description :</strong> Travail au sein d'une équipe informatique. Dans le cadre de la SAÉ 1.06, j'ai collaboré en groupe pour analyser une organisation, réaliser son diagnostic externe et étudier sa politique RSE (Responsabilité Sociétale des Entreprises) liée à l'empreinte écologique du numérique. Cela a impliqué une organisation rigoureuse du travail d'équipe, de la veille numérique et la conception de supports de présentation.</p>
+                            <p><strong>Trace :</strong> Le dossier écrit conjoint sur l'organisation étudiée, ainsi que les supports visuels (diaporamas) déposés sur Moodle pour accompagner nos deux soutenances.</p>
+                            <p><strong>Preuve :</strong> L'évaluation de l'équipe lors des présentations (Oral 1 et Oral 2). La validation de ces livrables démontre la bonne répartition de la charge de travail, une prise de parole équitable et la réussite de notre dynamique d'équipe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech-sidebar">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-original.svg" alt="Trello" class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Markdown" class="tech-icon">
+                    </div>
+                </article>
+        </section>
+
+        <section id="contacts" class="section-container">
+            <h2>Travaillons Ensemble</h2>
+            <p class="contact-text">Je suis actuellement à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter via ce formulaire ou sur mes réseaux professionnels.</p>
+
+            <div class="contact-wrapper">
+                <form action="https://formspree.io/f/xwvzjaez" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom / Entreprise</label>
+                        <input type="text" id="name" name="name" required placeholder="Votre nom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Envoyer le message</button>
+                </form>
+
+                <!-- Réseaux sociaux -->
+                <div class="social-links">
+                    <h3>Mes Réseaux</h3>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Ako-Didion" target="_blank" class="social-btn">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Remplace le lien par ton vrai profil LinkedIn -->
+                            <a href="https://www.linkedin.com/in/ako-didion/" target="_blank" class="social-btn">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="tech-icon">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="cv.pdf" download="DIDION_Ako_CV.pdf" class="btn-primary btn-cv">
+                        📄 Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ako - Portfolio d'évaluation Semestre 2</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Si on défile vers le bas ET qu'on a dépassé la hauteur du menu
+            if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+                header.classList.add('header-hidden'); // Cache la barre
+            } 
+            // Si on défile vers le haut
+            else {
+                header.classList.remove('header-hidden'); // Montre la barre
+            }
+            
+            lastScrollTop = scrollTop; // Met à jour la position pour le prochain calcul
+        });
+    </script>
 </body>
 </html>
